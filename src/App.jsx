@@ -13,7 +13,7 @@ function App() {
   return (
     <>
       <Navbar></Navbar>
-      <Suspense>
+      <Suspense fallback={<div>Loading ......</div>}>
         <FoodSection foodDataRes={foodDataPromise}></FoodSection>
     </Suspense>
 

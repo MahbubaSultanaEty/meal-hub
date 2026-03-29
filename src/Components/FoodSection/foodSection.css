@@ -1,18 +1,36 @@
 .food-card-container{
     display: grid;
     grid-template-columns: repeat(2,1fr);
-  max-width: 1200px;
+  max-width: 600px;
 margin: 0 auto;
   gap: 20px;
    border: 2px solid red;
     padding: 10px;
     background-color: orange;
+    height: 100vh;
+    overflow-y: scroll;
+    
+}
+
+.meals-section{
+    grid-column: 1 / span 2;
 }
 .meals-section h1{
     margin: 10px auto;
     width: 300px;
     padding: 5px 10px;
     background-color: black;
-    color: white;
-    
+    color: white; 
+       
+}
+
+.main-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.cart{
+    width: 80%;
+    padding: 55px 10px;
+    margin: 65px auto;
+    background-color: rgba(255, 195, 127, 0.911);
 }
