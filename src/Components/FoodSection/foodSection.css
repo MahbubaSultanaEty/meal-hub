@@ -1,0 +1,18 @@
+.food-card-container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+  max-width: 1200px;
+margin: 0 auto;
+  gap: 20px;
+   border: 2px solid red;
+    padding: 10px;
+    background-color: orange;
+}
+.meals-section h1{
+    margin: 10px auto;
+    width: 300px;
+    padding: 5px 10px;
+    background-color: black;
+    color: white;
+    
+}

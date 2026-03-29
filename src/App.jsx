@@ -1,27 +1,22 @@
 
 import Home from './Home'
 import "./App.css"
-import navPhoto from './assets/food-nav-photo.jpeg'
+import Navbar from './Components/Navbar/Navbar'
+import FoodSection from './Components/FoodSection/FoodSection'
+import { Suspense } from 'react'
+
+const foodDataPromise= fetch("https://www.themealdb.com/api/json/v1/1/search.php?f=a").then(res=> res.json())
 
 function App() {
   
 
   return (
     <>
-      <nav className='nav-container'>
-        <div className='nav-left'>
-          <img style={{height: "8vw"}} src={navPhoto}></img>
-          <h2>Tasty Bites</h2>
-        </div>
-        <div>
-          <ul className='nav-right'>
-            <li>Home</li>
-            <li>Orders</li>
-             <li>BLogs</li>
-            <li>Contacts</li>
-          </ul>
-        </div>
-         </nav>
+      <Navbar></Navbar>
+      <Suspense>
+        <FoodSection foodDataRes={foodDataPromise}></FoodSection>
+    </Suspense>
+
     </>
   )
 }

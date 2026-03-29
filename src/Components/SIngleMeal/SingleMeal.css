@@ -1,0 +1,7 @@
+.single-food-card{
+    background-color: rgba(127, 255, 212, 0.856);    
+    overflow: hidden;
+    padding: 10px;
+    border-radius: 5px;
+}
+
