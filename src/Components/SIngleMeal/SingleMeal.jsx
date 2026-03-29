@@ -1,12 +1,12 @@
 import React from 'react';
 import "./SingleMeal.css";
 
-const SingleMeal = ({meal}) => {
+const SingleMeal = ({meal, addToCart}) => {
     return (
         <div className='single-food-card'>
             <img style={{width: "100%"}} src={meal.strMealThumb}/>
             <h5>{meal.strMeal}</h5>
-            <button >Add To Cart</button>
+            <button onClick={()=>addToCart(meal)}>Add To Cart</button>
         </div>
     );
 };
