@@ -3,3 +3,26 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+body{
+  margin: 0 auto;
+}
+
+.nav-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(127, 255, 212, 0.151);
+  padding: 10px 20px;
+}
+
+.nav-left, .nav-right{
+display: flex;
+justify-content: space-between;
+align-items: center;
+gap: 10px;
+}
+nav li{
+  text-decoration: none;
+  list-style-type: none;
+}

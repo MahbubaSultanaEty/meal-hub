@@ -1,21 +1,27 @@
-import { useState } from 'react'
-import './App.css'
+
 import Home from './Home'
+import "./App.css"
+import navPhoto from './assets/food-nav-photo.jpeg'
 
 function App() {
   
-  const [num, setNum]= useState(0)
- console.log(num, setNum)
-  const  changeNumber =() => {
-    const newNum = num + 1;
-    return setNum(newNum)
-  }
 
   return (
     <>
-      <h1>{num}</h1>
-      <Home num={num}></Home>
-      <button onClick={changeNumber}>change number</button>
+      <nav className='nav-container'>
+        <div className='nav-left'>
+          <img style={{height: "8vw"}} src={navPhoto}></img>
+          <h2>Tasty Bites</h2>
+        </div>
+        <div>
+          <ul className='nav-right'>
+            <li>Home</li>
+            <li>Orders</li>
+             <li>BLogs</li>
+            <li>Contacts</li>
+          </ul>
+        </div>
+         </nav>
     </>
   )
 }
